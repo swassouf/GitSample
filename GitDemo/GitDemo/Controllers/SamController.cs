@@ -13,5 +13,10 @@ namespace GitDemo.Controllers
         {
             return View();
         }
+
+        public ActionResult GetMethod1()
+        {
+            return View();
+        }
     }
 }
