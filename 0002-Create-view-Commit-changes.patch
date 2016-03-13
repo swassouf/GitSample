@@ -1,0 +1,81 @@
+From a9d2fc4abf6e837c622cb632b4b10320b3a81c9b Mon Sep 17 00:00:00 2001
+From: swassouf <sam.wassouf@yahoo.com>
+Date: Sun, 13 Mar 2016 11:29:30 -0500
+Subject: [PATCH 2/2] Create view Commit changes
+
+---
+ GitDemo/GitDemo/App_Start/RouteConfig.cs     |  2 +-
+ GitDemo/GitDemo/Controllers/SamController.cs |  2 +-
+ GitDemo/GitDemo/GitDemo.csproj               |  2 +-
+ GitDemo/GitDemo/Views/Sam/Default.cshtml     | 17 +++++++++++++++++
+ 4 files changed, 20 insertions(+), 3 deletions(-)
+ create mode 100644 GitDemo/GitDemo/Views/Sam/Default.cshtml
+
+diff --git a/GitDemo/GitDemo/App_Start/RouteConfig.cs b/GitDemo/GitDemo/App_Start/RouteConfig.cs
+index 54f3f42..c337ce8 100644
+--- a/GitDemo/GitDemo/App_Start/RouteConfig.cs
++++ b/GitDemo/GitDemo/App_Start/RouteConfig.cs
+@@ -12,7 +12,7 @@ namespace GitDemo
+         public static void RegisterRoutes(RouteCollection routes)
+         {
+             routes.IgnoreRoute("{resource}.axd/{*pathInfo}");
+-
++      
+             routes.MapRoute(
+                 name: "Default",
+                 url: "{controller}/{action}/{id}",
+diff --git a/GitDemo/GitDemo/Controllers/SamController.cs b/GitDemo/GitDemo/Controllers/SamController.cs
+index 32f7657..8152bc2 100644
+--- a/GitDemo/GitDemo/Controllers/SamController.cs
++++ b/GitDemo/GitDemo/Controllers/SamController.cs
+@@ -9,7 +9,7 @@ namespace GitDemo.Controllers
+     public class SamController : Controller
+     {
+         // GET: Sam
+-        public ActionResult Index()
++        public ActionResult Default()
+         {
+             return View();
+         }
+diff --git a/GitDemo/GitDemo/GitDemo.csproj b/GitDemo/GitDemo/GitDemo.csproj
+index 0f71939..20603b7 100644
+--- a/GitDemo/GitDemo/GitDemo.csproj
++++ b/GitDemo/GitDemo/GitDemo.csproj
+@@ -268,10 +268,10 @@
+     <Content Include="Views\Manage\VerifyPhoneNumber.cshtml" />
+     <Content Include="Views\Shared\Lockout.cshtml" />
+     <Content Include="Views\Shared\_LoginPartial.cshtml" />
++    <Content Include="Views\Sam\Default.cshtml" />
+   </ItemGroup>
+   <ItemGroup>
+     <Folder Include="App_Data\" />
+-    <Folder Include="Views\Sam\" />
+   </ItemGroup>
+   <ItemGroup>
+     <Content Include="fonts\glyphicons-halflings-regular.woff" />
+diff --git a/GitDemo/GitDemo/Views/Sam/Default.cshtml b/GitDemo/GitDemo/Views/Sam/Default.cshtml
+new file mode 100644
+index 0000000..a9e3837
+--- /dev/null
++++ b/GitDemo/GitDemo/Views/Sam/Default.cshtml
+@@ -0,0 +1,17 @@
++﻿
++@{
++    Layout = null;
++}
++
++<!DOCTYPE html>
++
++<html>
++<head>
++    <meta name="viewport" content="width=device-width" />
++    <title>Default</title>
++</head>
++<body>
++    <div> 
++    </div>
++</body>
++</html>
+-- 
+2.7.2.windows.1
+
