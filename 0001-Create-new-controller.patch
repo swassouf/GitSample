@@ -1,0 +1,58 @@
+From 12be589363a6391f0c938b1308b76f1b5815bdb2 Mon Sep 17 00:00:00 2001
+From: swassouf <sam.wassouf@yahoo.com>
+Date: Sat, 12 Mar 2016 13:00:58 -0600
+Subject: [PATCH 1/2] Create new controller
+
+---
+ GitDemo/GitDemo/Controllers/SamController.cs | 17 +++++++++++++++++
+ GitDemo/GitDemo/GitDemo.csproj               |  2 ++
+ 2 files changed, 19 insertions(+)
+ create mode 100644 GitDemo/GitDemo/Controllers/SamController.cs
+
+diff --git a/GitDemo/GitDemo/Controllers/SamController.cs b/GitDemo/GitDemo/Controllers/SamController.cs
+new file mode 100644
+index 0000000..32f7657
+--- /dev/null
++++ b/GitDemo/GitDemo/Controllers/SamController.cs
+@@ -0,0 +1,17 @@
++﻿using System;
++using System.Collections.Generic;
++using System.Linq;
++using System.Web;
++using System.Web.Mvc;
++
++namespace GitDemo.Controllers
++{
++    public class SamController : Controller
++    {
++        // GET: Sam
++        public ActionResult Index()
++        {
++            return View();
++        }
++    }
++}
+\ No newline at end of file
+diff --git a/GitDemo/GitDemo/GitDemo.csproj b/GitDemo/GitDemo/GitDemo.csproj
+index 9721c34..0f71939 100644
+--- a/GitDemo/GitDemo/GitDemo.csproj
++++ b/GitDemo/GitDemo/GitDemo.csproj
+@@ -198,6 +198,7 @@
+     <Compile Include="Controllers\AccountController.cs" />
+     <Compile Include="Controllers\HomeController.cs" />
+     <Compile Include="Controllers\ManageController.cs" />
++    <Compile Include="Controllers\SamController.cs" />
+     <Compile Include="Global.asax.cs">
+       <DependentUpon>Global.asax</DependentUpon>
+     </Compile>
+@@ -270,6 +271,7 @@
+   </ItemGroup>
+   <ItemGroup>
+     <Folder Include="App_Data\" />
++    <Folder Include="Views\Sam\" />
+   </ItemGroup>
+   <ItemGroup>
+     <Content Include="fonts\glyphicons-halflings-regular.woff" />
+-- 
+2.7.2.windows.1
+
