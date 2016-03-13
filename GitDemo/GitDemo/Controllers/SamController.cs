@@ -9,7 +9,7 @@ namespace GitDemo.Controllers
     public class SamController : Controller
     {
         // GET: Sam
-        public ActionResult Index()
+        public ActionResult Default()
         {
             return View();
         }
