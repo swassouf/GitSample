@@ -1,0 +1,40 @@
+﻿@model Organization.Application.Broker.Models.HomeViewModel
+@{
+    ViewBag.Title = "Register";
+}
+
+<h2>@ViewBag.Title.</h2>
+<div class="row">
+    <div class="col-md-8 col-sm-12 col-xs-12">
+
+        @Html.ValidationSummary("", new { @class = "text-danger" })
+        @{
+            IList<String> errors = (IList<String>)TempData["Errors"] ?? new List<String>();
+        }
+        @if (errors.Count > 0)
+        {
+            <div class="alert alert-danger">
+                <ul>
+                    @foreach (var error in errors)
+                {
+                        <li>@Html.Raw(@error)</li>
+                    }
+                </ul>
+
+            </div>
+        }
+        <span class="glyphicon glyphicon-ok">sss</span>
+        <span>test</span>
+        This is the content of the home page
+    </div>
+    <div class="col-md-4 col-sm-12 col-xs-12">
+        @if (!User.Identity.IsAuthenticated)
+        {
+            @Html.Action(Mvc.Account.Actions.Register())
+        }
+    </div>
+</div>
+
+@section Scripts {
+    @Scripts.Render("~/Scripts/InHouse/Register.js")
+}
